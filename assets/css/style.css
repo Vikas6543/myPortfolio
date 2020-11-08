@@ -2,8 +2,8 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: 'Open Sans', sans-serif;
   color: #272829;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 a {
@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 /*--------------------------------------------------------------
@@ -89,7 +89,7 @@ h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #header .profile h1 a,
@@ -208,7 +208,6 @@ h6 {
   -o-transition: all 0.4s;
 }
 
-
 .mobile-nav-toggle i {
   color: rgb(0, 0, 0);
   background-color: rgb(230, 228, 228);
@@ -223,7 +222,6 @@ h6 {
   left: 0;
 }
 
-
 .mobile-nav-active .mobile-nav-toggle i {
   color: rgb(0, 0, 0);
 }
@@ -234,12 +232,11 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url('../img/blogging-coding.jpg') top center;
-  background-size: cover;
+  background-image: linear-gradient(to right, black, white);
 }
 
 #hero:before {
-  content: '';
+  content: "";
   background: rgba(5, 13, 24, 0.5);
   position: absolute;
   bottom: 0;
@@ -267,7 +264,7 @@ h6 {
   color: #fff;
   margin-bottom: 35px;
   font-size: 26px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 #hero p span {
@@ -292,7 +289,6 @@ h6 {
   letter-spacing: 1px;
   font-size: 15px;
 }
-
 
 @media (min-width: 1024px) {
   #hero {
@@ -341,7 +337,7 @@ section {
 }
 
 .section-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: 50px;
@@ -362,6 +358,13 @@ section {
   font-weight: 700;
   font-size: 26px;
   color: #173b6c;
+}
+
+.about-content {
+  text-align: justify;
+  text-indent: 45px;
+  word-spacing: 0.5px;
+  letter-spacing: 0.5px;
 }
 
 .about .content ul {
@@ -388,6 +391,7 @@ section {
 --------------------------------------------------------------*/
 .skills .progress {
   height: 50px;
+  margin-bottom: 10px;
   display: block;
   background: none;
 }
@@ -398,7 +402,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #050d18;
 }
 
@@ -417,7 +421,6 @@ section {
   transition: 0.9s;
   background-color: #149ddd;
 }
-
 
 /*--------------------------------------------------------------
 # Portfolio
@@ -475,7 +478,7 @@ section {
 }
 
 .portfolio .portfolio-wrap::before {
-  content: '';
+  content: "";
   background: rgba(255, 255, 255, 0.5);
   position: absolute;
   left: 0;
@@ -574,7 +577,8 @@ section {
   color: #173b6c;
 }
 
-.email p, .phone p{
+.email p,
+.phone p {
   letter-spacing: 0.8px;
 }
 
@@ -609,7 +613,6 @@ section {
   color: #fff;
 }
 
-
 @-webkit-keyframes animate-loading {
   0% {
     transform: rotate(0deg);
@@ -628,138 +631,6 @@ section {
   }
 }
 
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 20px 0;
-  background: #f9f9f9;
-}
-
-.breadcrumbs h2 {
-  font-size: 26px;
-  font-weight: 300;
-}
-
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-}
-
-.breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #0e2442;
-  content: '/';
-}
-
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-  .breadcrumbs ol {
-    display: block;
-  }
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
-
-/*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
-.portfolio-details {
-  padding-top: 40px;
-}
-
-.portfolio-details .portfolio-details-container {
-  position: relative;
-}
-
-.portfolio-details .portfolio-details-carousel {
-  position: relative;
-  z-index: 1;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-nav,
-.portfolio-details .portfolio-details-carousel .owl-dots {
-  margin-top: 5px;
-  text-align: left;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot {
-  display: inline-block;
-  margin: 0 10px 0 0;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background-color: #ddd !important;
-}
-
-.portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #149ddd !important;
-}
-
-.portfolio-details .portfolio-info {
-  padding: 30px;
-  position: absolute;
-  right: 0;
-  bottom: -70px;
-  background: #fff;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-}
-
-.portfolio-details .portfolio-info h3 {
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.portfolio-details .portfolio-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.portfolio-details .portfolio-info ul li + li {
-  margin-top: 10px;
-}
-
-.portfolio-details .portfolio-description {
-  padding-top: 50px;
-}
-
-.portfolio-details .portfolio-description h2 {
-  width: 50%;
-  font-size: 26px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.portfolio-details .portfolio-description p {
-  padding: 0;
-}
-
-@media (max-width: 768px) {
-  .portfolio-details .portfolio-description h2 {
-    width: 100%;
-  }
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Footer
