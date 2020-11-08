@@ -1,10 +1,39 @@
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
 body {
   color: #272829;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* Pre Loader */
+#pre-loader {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+#main-loader {
+  background-image: url("/assets/img/loader.gif");
+  background-repeat: no-repeat;
+  width: 145px;
+  height: 145px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 400px) {
+  
+}
+
+
 
 a {
   color: #149ddd;
