@@ -1,6 +1,6 @@
 body {
   color: #272829;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /* Pre Loader */
@@ -30,10 +30,7 @@ body {
 }
 
 @media only screen and (max-width: 400px) {
-  
 }
-
-
 
 a {
   color: #149ddd;
@@ -319,6 +316,111 @@ h6 {
   font-size: 15px;
 }
 
+
+
+/* Scroll Down Animation */
+#mouse-scroll {
+  margin-top: 6rem;
+  margin-left: 5rem;
+}
+#mouse-scroll span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  margin: 0 0 3px 5px;
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#mouse-scroll .mouse {
+  height: 30px;
+  width: 21px;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #ffffff;
+  top: 170px;
+}
+#mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+#mouse-scroll .down-arrow-1,
+#mouse-scroll .down-arrow-2,
+#mouse-scroll .down-arrow-3 {
+  -webkit-animation: mouse-scroll 1s infinite;
+  -moz-animation: mouse-scroll 1s infinite;
+}
+#mouse-croll .down-arrow-1 {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-dekay: 0.3s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+  -webkit-animation: animated-mouse 1.2s ease infinite;
+  moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
@@ -402,7 +504,12 @@ section {
 }
 
 .about .content ul li {
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .about .content ul i {
@@ -413,6 +520,14 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about ul li:hover {
+  transform: translatex(20px);
+  -webkit-transform: translatex(20px);
+  -moz-transform: translatex(20px);
+  -ms-transform: translatex(20px);
+  -o-transform: translatex(20px);
 }
 
 /*--------------------------------------------------------------
@@ -504,6 +619,7 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
+  cursor: pointer;
 }
 
 .portfolio .portfolio-wrap::before {
@@ -517,6 +633,40 @@ section {
   transition: all ease-in-out 0.3s;
   z-index: 2;
   opacity: 0;
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+}
+
+.portfolio-wrap:hover img {
+  opacity: 0.8;
+}
+.portfolio-wrap .img-hover-text {
+  color: #fff;
+  background: linear-gradient(
+    to right,
+    rgba(34, 47, 61, 0.9),
+    #222f3d,
+    #222f3d
+  );
+  text-align: right;
+  width: 100%;
+  padding: 12px 12px 12px 60px;
+  transform: translateY(-50%) scaleY(0);
+  position: absolute;
+  top: 70%;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio-wrap:hover .img-hover-text {
+  transform: translateY(-50%) scaleY(1);
+}
+.portfolio-wrap .title {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 4px;
 }
 
 .portfolio .portfolio-wrap .portfolio-links {
@@ -533,14 +683,13 @@ section {
 
 .portfolio .portfolio-wrap .portfolio-links a {
   color: #fff;
-  font-size: 28px;
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
 }
 
 .portfolio .portfolio-wrap .portfolio-links .demo {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
@@ -562,104 +711,6 @@ section {
   opacity: 1;
   bottom: 0;
 }
-
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-.contact {
-  padding-bottom: 50px;
-}
-
-.contact .info {
-  padding: 20px 0 0 10px;
-  background: #fff;
-  width: 100%;
-  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
-}
-
-.contact .info i {
-  font-size: 18px;
-  color: #149ddd;
-  float: left;
-  width: 44px;
-  height: 44px;
-  background: #dff3fc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-  padding: 0 0 0 60px;
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 5px;
-  color: #050d18;
-}
-
-.contact .info p {
-  padding: 0 0 10px 60px;
-  margin-bottom: 20px;
-  font-size: 14px;
-  color: #173b6c;
-}
-
-.email p,
-.phone p {
-  letter-spacing: 0.8px;
-}
-
-.contact .info .social-links {
-  padding-left: 60px;
-}
-
-.contact .info .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  border-radius: 50%;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-  margin-right: 10px;
-}
-
-.contact .info .social-links a:hover {
-  background: #149ddd;
-  color: #fff;
-}
-
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #149ddd;
-  color: #fff;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 
 /*--------------------------------------------------------------
 # Footer
