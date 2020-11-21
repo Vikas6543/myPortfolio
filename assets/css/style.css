@@ -535,13 +535,18 @@ section {
 --------------------------------------------------------------*/
 .skills .progress {
   height: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   display: block;
   background: none;
 }
 
+.skill i {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
 .skills .progress .skill {
-  padding: 10px 0;
+  padding: 5px 0;
   margin: 0 0 6px 0;
   text-transform: uppercase;
   display: block;
@@ -736,6 +741,10 @@ section {
   text-align: center;
   font-size: 13px;
   color: #eaebf0;
+}
+
+.credits .name {
+  color: yellow;
 }
 
 @media (max-width: 1199px) {
